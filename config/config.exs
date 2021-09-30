@@ -7,6 +7,12 @@
 # General application configuration
 import Config
 
+config :exercism_formatter,
+  formatter_commands: %{
+    "elixir" => %{command: "mix", options: ["format"]},
+    "elm" => %{command: "elm-format", options: ["--yes"]}
+  }
+
 # Configures the endpoint
 config :exercism_formatter, ExercismFormatterWeb.Endpoint,
   url: [host: "localhost"],

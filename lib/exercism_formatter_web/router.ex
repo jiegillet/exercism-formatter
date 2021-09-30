@@ -7,6 +7,8 @@ defmodule ExercismFormatterWeb.Router do
 
   scope "/api", ExercismFormatterWeb do
     pipe_through :api
+
+    post "/format/:language", FormatController, :format
   end
 
   # Enables LiveDashboard only for development
